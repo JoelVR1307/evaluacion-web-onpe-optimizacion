@@ -10,6 +10,44 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header role="banner">
+        <nav class="navbar navbar-expand-lg navbar-gobpe py-2" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Inicio GOB.PE">
+            <!-- Ícono home SVG -->
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="white" aria-hidden="true" focusable="false">
+                <path d="M17 3L3 14v17h9v-9h10v9h9V14L17 3z"/>
+            </svg>
+            gob.pe
+            </a>
+
+            <button class="navbar-toggler border-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto gap-lg-1" role="list">
+                <li class="nav-item"><a class="nav-link px-3" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#tramites">Trámites</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#api-consulta">Consultar</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#contacto">Reportar</a></li>
+            </ul>
+            <a class="btn btn-danger ms-lg-3 px-4 py-1" href="#api-consulta" role="button">
+                Iniciar sesión
+            </a>
+            </div>
+        </div>
+        </nav>
+    </header>
+    <main id="main-content">
+
+    </main>
+    <footer role="contentinfo">
+
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>

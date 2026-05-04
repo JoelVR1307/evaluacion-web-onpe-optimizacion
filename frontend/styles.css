@@ -1,1 +1,110 @@
 /*archivo q usare para aplicar estilos a la web*/
+
+:root {
+    --color-primary:   #c8102e;
+    --color-secondary: #003087;
+    --color-accent:    #f4f6f9;
+    --color-text:      #212529;
+    --color-white:     #ffffff;
+    --radius:          8px;
+    --shadow-sm:       0 2px 8px rgba(0,0,0,.10);
+    --shadow-md:       0 4px 20px rgba(0,0,0,.14);
+    --transition:      .2s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--color-text);
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*navbar*/
+.navbar-gobpe {
+    background-color: var(--color-secondary);
+}
+
+.navbar-gobpe .navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-gobpe .nav-link {
+    color: rgba(255, 255, 255, .85) !important;
+}
+
+.navbar-gobpe .nav-link:hover,
+.navbar-gobpe .nav-link:focus {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+/*hero*/
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    padding: 3.5rem 0;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #1a5276 100%);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 800;
+}
+
+.hero-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .65;
+}
+
+/*search-section*/
+.search-section {
+    background: var(--color-accent);
+    padding: 2rem 0;
+}
+
+/*services-section*/
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1.4rem;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-primary);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-card h3 {
+    color: var(--color-secondary);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.service-card p {
+    font-size: .875rem;
+    color: #6c757d;
+}

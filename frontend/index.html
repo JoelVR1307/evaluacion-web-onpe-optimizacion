@@ -1,49 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Plataforma digital del Estado Peruano - Prototipo académico UPN">
-  <title>GOB.PE - Estado Peruano</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma digital del Estado Peruano - Prototipo académico UPN">
+    <title>GOB.PE - Estado Peruano</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header role="banner">
         <nav class="navbar navbar-expand-lg navbar-gobpe py-2" aria-label="Navegación principal">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Inicio GOB.PE">
-            <!-- Ícono home SVG -->
-            <svg width="34" height="34" viewBox="0 0 34 34" fill="white" aria-hidden="true" focusable="false">
-                <path d="M17 3L3 14v17h9v-9h10v9h9V14L17 3z"/>
-            </svg>
-            gob.pe
-            </a>
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Inicio GOB.PE">
+                    <!-- Ícono home SVG -->
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="white" aria-hidden="true" focusable="false">
+                        <path d="M17 3L3 14v17h9v-9h10v9h9V14L17 3z" />
+                    </svg>
+                    gob.pe
+                </a>
 
-            <button class="navbar-toggler border-light" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#mainNav"
-                    aria-controls="mainNav" aria-expanded="false"
+                <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
                     aria-label="Abrir menú de navegación">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto gap-lg-1" role="list">
-                <li class="nav-item"><a class="nav-link px-3" href="#servicios">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#tramites">Trámites</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#api-consulta">Consultar</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#contacto">Reportar</a></li>
-            </ul>
-            <a class="btn btn-danger ms-lg-3 px-4 py-1" href="#api-consulta" role="button">
-                Iniciar sesión
-            </a>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto gap-lg-1" role="list">
+                        <li class="nav-item"><a class="nav-link px-3" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#tramites">Trámites</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#api-consulta">Consultar</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#contacto">Reportar</a></li>
+                    </ul>
+                    <a class="btn btn-danger ms-lg-3 px-4 py-1" href="#api-consulta" role="button">
+                        Iniciar sesión
+                    </a>
+                </div>
             </div>
-        </div>
         </nav>
     </header>
     <main id="main-content">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <p class="small text-white-50 mb-1 text-uppercase letter-spacing-1">
+                            Presidencia del Consejo de Ministros
+                        </p>
+                        <h1 id="hero-heading" class="mb-3">
+                            Plataforma Digital del Estado Peruano
+                        </h1>
+                        <p class="lead mb-4" style="color:rgba(255,255,255,.85)">
+                            Accede a trámites, servicios e información institucional del Estado en un solo lugar.
+                            19&nbsp;trámites digitalizados · más de 60,000 ciudadanos capacitados.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-lg-start">
+                            <a href="#tramites" class="btn btn-light btn-lg px-4" role="button">Ver Trámites</a>
+                            <a href="#api-consulta" class="btn btn-outline-light btn-lg px-4" role="button">Consultar
+                                Estado</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 hero-icon-wrap" aria-hidden="true">
+                        <p class="mt-2 small text-white-100">Gobierno Digital · DS 033-2018-PCM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="search-section" id="buscar" aria-labelledby="buscar-title">
+            <div class="container">
+                <h2 id="buscar-title" class="visually-hidden">Buscador de trámites y servicios</h2>
+                <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="input-group input-group-lg shadow-sm" role="search">
+                    <label for="buscador-input" class="visually-hidden">Buscar trámites y servicios</label>
+                    <input type="search" class="form-control" id="buscador-input"
+                            placeholder="¿Qué trámite o servicio necesitas?"
+                            autocomplete="off" aria-describedby="search-hint">
+                    <button class="btn btn-danger px-4" type="button" id="btn-buscar"
+                            aria-label="Buscar">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                        </svg>
+                        Buscar
+                    </button>
+                    </div>
+                    <p id="search-hint" class="form-text text-center mt-1">Ej: "renovar DNI", "partida de nacimiento", "RUC"</p>
+                    <div id="search-results" class="mt-3" role="status" aria-live="polite" aria-atomic="true"></div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5" id="servicios" aria-labelledby="servicios-title">
+            <div class="container">
+                <div class="text-center mb-4">
+                <h2 id="servicios-title" class="fw-bold" style="color:var(--color-secondary)">
+                    Servicios del Estado Peruano
+                </h2>
+                <p class="text-muted">Accede a los servicios más solicitados por los ciudadanos</p>
+                </div>
 
+                <div class="services-grid" role="list">
+
+                <article class="service-card" role="listitem">
+                    <div class="d-flex gap-3 align-items-start">
+                    <div class="rounded-circle bg-primary bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                        <svg width="26" height="26" fill="#003087" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                    </div>
+                    <div>
+                        <h3>DNI e Identidad</h3>
+                        <p>Renovación, duplicado y consulta del Documento Nacional de Identidad (RENIEC).</p>
+                        <a href="#tramites" class="btn btn-sm btn-outline-primary" aria-label="Ir a trámites de DNI">Ver trámites →</a>
+                    </div>
+                    </div>
+                </article>
+
+                <article class="service-card" role="listitem">
+                    <div class="d-flex gap-3 align-items-start">
+                    <div class="rounded-circle bg-danger bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                        <svg width="26" height="26" fill="#c8102e" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Salud y Bienestar</h3>
+                        <p>SIS, ESSALUD, Minsa Digital y atención médica en línea del Estado.</p>
+                        <a href="#tramites" class="btn btn-sm btn-outline-danger" aria-label="Ir a trámites de salud">Ver trámites →</a>
+                    </div>
+                    </div>
+                </article>
+
+                <article class="service-card" role="listitem">
+                    <div class="d-flex gap-3 align-items-start">
+                    <div class="rounded-circle bg-success bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                        <svg width="26" height="26" fill="#198754" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Educación</h3>
+                        <p>Matrículas, becas, certificados y servicios del MINEDU y universidades públicas.</p>
+                        <a href="#tramites" class="btn btn-sm btn-outline-success" aria-label="Ir a trámites de educación">Ver trámites →</a>
+                    </div>
+                    </div>
+                </article>
+
+                <article class="service-card" role="listitem">
+                    <div class="d-flex gap-3 align-items-start">
+                    <div class="rounded-circle bg-warning bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                        <svg width="26" height="26" fill="#d4a000" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Impuestos (SUNAT)</h3>
+                        <p>Declaraciones tributarias, consulta RUC, deudas fiscales y comprobantes electrónicos.</p>
+                        <a href="#tramites" class="btn btn-sm btn-outline-warning" aria-label="Ir a trámites de SUNAT">Ver trámites →</a>
+                    </div>
+                    </div>
+                </article>
+
+                <article class="service-card" role="listitem">
+                    <div class="d-flex gap-3 align-items-start">
+                    <div class="rounded-circle bg-info bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                        <svg width="26" height="26" fill="#0dcaf0" viewBox="0 0 24 24"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Pasaporte y Migración</h3>
+                        <p>Emisión y renovación de pasaportes, antecedentes migratorios y permisos de salida.</p>
+                        <a href="#tramites" class="btn btn-sm btn-outline-info" aria-label="Ir a trámites de migración">Ver trámites →</a>
+                    </div>
+                    </div>
+                </article>
+
+                <article class="service-card" role="listitem">
+                    <div class="d-flex gap-3 align-items-start">
+                    <div class="rounded-circle bg-secondary bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                        <svg width="26" height="26" fill="#6c757d" viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.38C18 2.07 15.93 0 13.38 0c-1.3 0-2.48.53-3.38 1.37-.9-.84-2.09-1.37-3.38-1.37C4.07 0 2 2.07 2 4.62c0 .5.11.94.18 1.38H0v2h2v14h8v-4h4v4h8V8h2V6zm-4.38-4C16.93 2 18 3.07 18 4.62c0 1.52-1.07 2.58-2.62 2.58H13V5.38l.92-.54C14.66 4.37 15.34 4 16 4c.05 0 .08-.02.08-.02C16.04 2.01 15.32 2 14.62 2zM9.38 2C8.68 2 7.96 2.01 7.92 4c0 0 .03.02.08.02.66 0 1.34.37 2.08.84l.92.54V7.2H8.62C7.07 7.2 6 6.14 6 4.62 6 3.07 7.07 2 8.62 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Licencia de Conducir</h3>
+                        <p>Renovación, duplicado y consulta de brevetes del Ministerio de Transportes (MTC).</p>
+                        <a href="#tramites" class="btn btn-sm btn-outline-secondary" aria-label="Ir a trámites de licencia">Ver trámites →</a>
+                    </div>
+                    </div>
+                </article>
+
+                </div>
+            </div>
+        </section>
+    
     </main>
     <footer role="contentinfo">
 
@@ -51,4 +194,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

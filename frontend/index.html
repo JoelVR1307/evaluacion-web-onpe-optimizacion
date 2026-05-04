@@ -318,6 +318,115 @@
                 </div>
             </div>
         </section>
+        <section class="py-5" id="tramites" aria-labelledby="tramites-title">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                <h2 id="tramites-title" class="fw-bold mb-0" style="color:var(--color-secondary)">
+                    Trámites Disponibles
+                </h2>
+                <button class="btn btn-outline-primary" id="btn-actualizar" aria-controls="tramites-tbody">
+                    ↺ Actualizar lista
+                </button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle table-gobpe" aria-label="Trámites disponibles en GOB.PE">
+                        <thead>
+                        <tr>
+                            <th scope="col">Trámite</th>
+                            <th scope="col">Institución</th>
+                            <th scope="col">Tiempo estimado</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col" class="text-center">Acción</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tramites-tbody">
+                        <tr>
+                            <td colspan="5" class="text-center py-4 text-muted">
+                            <div class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></div>
+                            Cargando trámites...
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light py-5" id="contacto" aria-labelledby="reporte-title">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-4">
+                    <h2 id="reporte-title" class="fw-bold" style="color:var(--color-secondary)">
+                        Reportar un Problema
+                    </h2>
+                    <p class="text-muted">¿Encontraste un error en la plataforma? Ayúdanos a mejorar.</p>
+                    </div>
+
+                    <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <form id="reporte-form" novalidate aria-label="Formulario para reportar problemas en GOB.PE">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                            <label for="rep-nombre" class="form-label">
+                                Nombre completo <abbr title="requerido" class="text-danger">*</abbr>
+                            </label>
+                            <input type="text" class="form-control" id="rep-nombre"
+                                    placeholder="Tu nombre" required minlength="3" maxlength="100"
+                                    aria-required="true" aria-describedby="rep-nombre-err">
+                            <div id="rep-nombre-err" class="invalid-feedback">Mínimo 3 caracteres.</div>
+                            </div>
+                            <div class="col-md-6">
+                            <label for="rep-email" class="form-label">
+                                Correo <abbr title="requerido" class="text-danger">*</abbr>
+                            </label>
+                            <input type="email" class="form-control" id="rep-email"
+                                    placeholder="tu@correo.com" required
+                                    aria-required="true" aria-describedby="rep-email-err">
+                            <div id="rep-email-err" class="invalid-feedback">Correo inválido.</div>
+                            </div>
+                            <div class="col-12">
+                            <label for="rep-tipo" class="form-label">
+                                Tipo de problema <abbr title="requerido" class="text-danger">*</abbr>
+                            </label>
+                            <select class="form-select" id="rep-tipo" required aria-required="true">
+                                <option value="">Seleccionar...</option>
+                                <option value="rendimiento">Rendimiento / Lentitud</option>
+                                <option value="accesibilidad">Accesibilidad</option>
+                                <option value="formulario">Error en formulario</option>
+                                <option value="mobile">Problema en móvil</option>
+                                <option value="api">Fallo en integración API</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            </div>
+                            <div class="col-12">
+                            <label for="rep-descripcion" class="form-label">
+                                Descripción <abbr title="requerido" class="text-danger">*</abbr>
+                            </label>
+                            <textarea class="form-control" id="rep-descripcion" rows="4"
+                                        placeholder="Describe el problema con el mayor detalle posible..."
+                                        required minlength="20" maxlength="500"
+                                        aria-required="true" aria-describedby="rep-desc-err rep-chars"></textarea>
+                            <div id="rep-desc-err" class="invalid-feedback">Mínimo 20 caracteres.</div>
+                            <div class="d-flex justify-content-end mt-1">
+                                <small id="rep-chars" class="text-muted" aria-live="polite">0 / 500</small>
+                            </div>
+                            </div>
+                            <div class="col-12">
+                            <button type="submit" class="btn btn-danger w-100 py-2 fw-semibold" id="btn-enviar">
+                                Enviar Reporte
+                            </button>
+                            </div>
+                        </div>
+                        </form>
+                        <div id="reporte-msg" class="mt-3" role="status" aria-live="polite"></div>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer role="contentinfo">
 

@@ -130,3 +130,29 @@ img {
     color: #dc3545; 
     font-weight: 700; 
 }
+
+.table-gobpe thead th { 
+    background: var(--color-secondary); 
+    color: #fff; 
+}
+
+.stats-row { 
+    display: flex; 
+    gap: 1rem; 
+    flex-wrap: wrap; 
+    margin-top: 1rem; 
+}
+
+.stat-card {
+    flex: 1 1 120px;
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-num {
+    font-size: 1.8rem;
+    font-weight: 800;
+}

@@ -74,119 +74,250 @@
             <div class="container">
                 <h2 id="buscar-title" class="visually-hidden">Buscador de trámites y servicios</h2>
                 <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="input-group input-group-lg shadow-sm" role="search">
-                    <label for="buscador-input" class="visually-hidden">Buscar trámites y servicios</label>
-                    <input type="search" class="form-control" id="buscador-input"
-                            placeholder="¿Qué trámite o servicio necesitas?"
-                            autocomplete="off" aria-describedby="search-hint">
-                    <button class="btn btn-danger px-4" type="button" id="btn-buscar"
-                            aria-label="Buscar">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
-                        </svg>
-                        Buscar
-                    </button>
+                    <div class="col-lg-8">
+                        <div class="input-group input-group-lg shadow-sm" role="search">
+                            <label for="buscador-input" class="visually-hidden">Buscar trámites y servicios</label>
+                            <input type="search" class="form-control" id="buscador-input"
+                                placeholder="¿Qué trámite o servicio necesitas?" autocomplete="off"
+                                aria-describedby="search-hint">
+                            <button class="btn btn-danger px-4" type="button" id="btn-buscar" aria-label="Buscar">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Buscar
+                            </button>
+                        </div>
+                        <p id="search-hint" class="form-text text-center mt-1">Ej: "renovar DNI", "partida de
+                            nacimiento", "RUC"</p>
+                        <div id="search-results" class="mt-3" role="status" aria-live="polite" aria-atomic="true"></div>
                     </div>
-                    <p id="search-hint" class="form-text text-center mt-1">Ej: "renovar DNI", "partida de nacimiento", "RUC"</p>
-                    <div id="search-results" class="mt-3" role="status" aria-live="polite" aria-atomic="true"></div>
-                </div>
                 </div>
             </div>
         </section>
         <section class="py-5" id="servicios" aria-labelledby="servicios-title">
             <div class="container">
                 <div class="text-center mb-4">
-                <h2 id="servicios-title" class="fw-bold" style="color:var(--color-secondary)">
-                    Servicios del Estado Peruano
-                </h2>
-                <p class="text-muted">Accede a los servicios más solicitados por los ciudadanos</p>
+                    <h2 id="servicios-title" class="fw-bold" style="color:var(--color-secondary)">
+                        Servicios del Estado Peruano
+                    </h2>
+                    <p class="text-muted">Accede a los servicios más solicitados por los ciudadanos</p>
                 </div>
 
                 <div class="services-grid" role="list">
 
-                <article class="service-card" role="listitem">
-                    <div class="d-flex gap-3 align-items-start">
-                    <div class="rounded-circle bg-primary bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
-                        <svg width="26" height="26" fill="#003087" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-                    </div>
-                    <div>
-                        <h3>DNI e Identidad</h3>
-                        <p>Renovación, duplicado y consulta del Documento Nacional de Identidad (RENIEC).</p>
-                        <a href="#tramites" class="btn btn-sm btn-outline-primary" aria-label="Ir a trámites de DNI">Ver trámites →</a>
-                    </div>
-                    </div>
-                </article>
+                    <article class="service-card" role="listitem">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle bg-primary bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                                <svg width="26" height="26" fill="#003087" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>DNI e Identidad</h3>
+                                <p>Renovación, duplicado y consulta del Documento Nacional de Identidad (RENIEC).</p>
+                                <a href="#tramites" class="btn btn-sm btn-outline-primary"
+                                    aria-label="Ir a trámites de DNI">Ver trámites →</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="service-card" role="listitem">
-                    <div class="d-flex gap-3 align-items-start">
-                    <div class="rounded-circle bg-danger bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
-                        <svg width="26" height="26" fill="#c8102e" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                    </div>
-                    <div>
-                        <h3>Salud y Bienestar</h3>
-                        <p>SIS, ESSALUD, Minsa Digital y atención médica en línea del Estado.</p>
-                        <a href="#tramites" class="btn btn-sm btn-outline-danger" aria-label="Ir a trámites de salud">Ver trámites →</a>
-                    </div>
-                    </div>
-                </article>
+                    <article class="service-card" role="listitem">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle bg-danger bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                                <svg width="26" height="26" fill="#c8102e" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Salud y Bienestar</h3>
+                                <p>SIS, ESSALUD, Minsa Digital y atención médica en línea del Estado.</p>
+                                <a href="#tramites" class="btn btn-sm btn-outline-danger"
+                                    aria-label="Ir a trámites de salud">Ver trámites →</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="service-card" role="listitem">
-                    <div class="d-flex gap-3 align-items-start">
-                    <div class="rounded-circle bg-success bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
-                        <svg width="26" height="26" fill="#198754" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-                    </div>
-                    <div>
-                        <h3>Educación</h3>
-                        <p>Matrículas, becas, certificados y servicios del MINEDU y universidades públicas.</p>
-                        <a href="#tramites" class="btn btn-sm btn-outline-success" aria-label="Ir a trámites de educación">Ver trámites →</a>
-                    </div>
-                    </div>
-                </article>
+                    <article class="service-card" role="listitem">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle bg-success bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                                <svg width="26" height="26" fill="#198754" viewBox="0 0 24 24">
+                                    <path
+                                        d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Educación</h3>
+                                <p>Matrículas, becas, certificados y servicios del MINEDU y universidades públicas.</p>
+                                <a href="#tramites" class="btn btn-sm btn-outline-success"
+                                    aria-label="Ir a trámites de educación">Ver trámites →</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="service-card" role="listitem">
-                    <div class="d-flex gap-3 align-items-start">
-                    <div class="rounded-circle bg-warning bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
-                        <svg width="26" height="26" fill="#d4a000" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-                    </div>
-                    <div>
-                        <h3>Impuestos (SUNAT)</h3>
-                        <p>Declaraciones tributarias, consulta RUC, deudas fiscales y comprobantes electrónicos.</p>
-                        <a href="#tramites" class="btn btn-sm btn-outline-warning" aria-label="Ir a trámites de SUNAT">Ver trámites →</a>
-                    </div>
-                    </div>
-                </article>
+                    <article class="service-card" role="listitem">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle bg-warning bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                                <svg width="26" height="26" fill="#d4a000" viewBox="0 0 24 24">
+                                    <path
+                                        d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Impuestos (SUNAT)</h3>
+                                <p>Declaraciones tributarias, consulta RUC, deudas fiscales y comprobantes electrónicos.
+                                </p>
+                                <a href="#tramites" class="btn btn-sm btn-outline-warning"
+                                    aria-label="Ir a trámites de SUNAT">Ver trámites →</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="service-card" role="listitem">
-                    <div class="d-flex gap-3 align-items-start">
-                    <div class="rounded-circle bg-info bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
-                        <svg width="26" height="26" fill="#0dcaf0" viewBox="0 0 24 24"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg>
-                    </div>
-                    <div>
-                        <h3>Pasaporte y Migración</h3>
-                        <p>Emisión y renovación de pasaportes, antecedentes migratorios y permisos de salida.</p>
-                        <a href="#tramites" class="btn btn-sm btn-outline-info" aria-label="Ir a trámites de migración">Ver trámites →</a>
-                    </div>
-                    </div>
-                </article>
+                    <article class="service-card" role="listitem">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle bg-info bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                                <svg width="26" height="26" fill="#0dcaf0" viewBox="0 0 24 24">
+                                    <path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Pasaporte y Migración</h3>
+                                <p>Emisión y renovación de pasaportes, antecedentes migratorios y permisos de salida.
+                                </p>
+                                <a href="#tramites" class="btn btn-sm btn-outline-info"
+                                    aria-label="Ir a trámites de migración">Ver trámites →</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="service-card" role="listitem">
-                    <div class="d-flex gap-3 align-items-start">
-                    <div class="rounded-circle bg-secondary bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
-                        <svg width="26" height="26" fill="#6c757d" viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.38C18 2.07 15.93 0 13.38 0c-1.3 0-2.48.53-3.38 1.37-.9-.84-2.09-1.37-3.38-1.37C4.07 0 2 2.07 2 4.62c0 .5.11.94.18 1.38H0v2h2v14h8v-4h4v4h8V8h2V6zm-4.38-4C16.93 2 18 3.07 18 4.62c0 1.52-1.07 2.58-2.62 2.58H13V5.38l.92-.54C14.66 4.37 15.34 4 16 4c.05 0 .08-.02.08-.02C16.04 2.01 15.32 2 14.62 2zM9.38 2C8.68 2 7.96 2.01 7.92 4c0 0 .03.02.08.02.66 0 1.34.37 2.08.84l.92.54V7.2H8.62C7.07 7.2 6 6.14 6 4.62 6 3.07 7.07 2 8.62 2z"/></svg>
-                    </div>
-                    <div>
-                        <h3>Licencia de Conducir</h3>
-                        <p>Renovación, duplicado y consulta de brevetes del Ministerio de Transportes (MTC).</p>
-                        <a href="#tramites" class="btn btn-sm btn-outline-secondary" aria-label="Ir a trámites de licencia">Ver trámites →</a>
-                    </div>
-                    </div>
-                </article>
+                    <article class="service-card" role="listitem">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle bg-secondary bg-opacity-10 p-2 flex-shrink-0" aria-hidden="true">
+                                <svg width="26" height="26" fill="#6c757d" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 6h-2.18c.07-.44.18-.88.18-1.38C18 2.07 15.93 0 13.38 0c-1.3 0-2.48.53-3.38 1.37-.9-.84-2.09-1.37-3.38-1.37C4.07 0 2 2.07 2 4.62c0 .5.11.94.18 1.38H0v2h2v14h8v-4h4v4h8V8h2V6zm-4.38-4C16.93 2 18 3.07 18 4.62c0 1.52-1.07 2.58-2.62 2.58H13V5.38l.92-.54C14.66 4.37 15.34 4 16 4c.05 0 .08-.02.08-.02C16.04 2.01 15.32 2 14.62 2zM9.38 2C8.68 2 7.96 2.01 7.92 4c0 0 .03.02.08.02.66 0 1.34.37 2.08.84l.92.54V7.2H8.62C7.07 7.2 6 6.14 6 4.62 6 3.07 7.07 2 8.62 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Licencia de Conducir</h3>
+                                <p>Renovación, duplicado y consulta de brevetes del Ministerio de Transportes (MTC).</p>
+                                <a href="#tramites" class="btn btn-sm btn-outline-secondary"
+                                    aria-label="Ir a trámites de licencia">Ver trámites →</a>
+                            </div>
+                        </div>
+                    </article>
 
                 </div>
             </div>
         </section>
-    
+        <section class="bg-light py-5" id="api-consulta" aria-labelledby="api-title">
+            <div class="container">
+                <div class="row g-5">
+
+                    <div class="col-lg-6">
+                        <h2 id="api-title" class="fw-bold mb-1" style="color:var(--color-secondary)">
+                            Consultar Estado de Trámite
+                        </h2>
+                        <p class="text-muted mb-4">Ingresa tus datos para consultar el estado en tiempo real mediante la
+                            API.</p>
+
+                        <form id="tramite-form" novalidate aria-label="Formulario de consulta de trámite">
+
+                            <div class="mb-3">
+                                <label for="tipo-tramite" class="form-label fw-semibold">
+                                    Tipo de trámite <abbr title="campo requerido" class="text-danger"
+                                        aria-label="requerido">*</abbr>
+                                </label>
+                                <select class="form-select" id="tipo-tramite" required aria-required="true"
+                                    aria-describedby="tipo-feedback">
+                                    <option value="">Seleccionar...</option>
+                                    <option value="dni">Renovación de DNI</option>
+                                    <option value="licencia">Licencia de Conducir</option>
+                                    <option value="partida">Partida de Nacimiento</option>
+                                    <option value="ruc">Consulta RUC</option>
+                                    <option value="pasaporte">Pasaporte</option>
+                                </select>
+                                <div id="tipo-feedback" class="invalid-feedback">Selecciona un tipo de trámite.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="expediente-input" class="form-label fw-semibold">
+                                    N° de Expediente <abbr title="campo requerido" class="text-danger"
+                                        aria-label="requerido">*</abbr>
+                                </label>
+                                <input type="text" class="form-control" id="expediente-input"
+                                    placeholder="EXP-2024-001234" pattern="^EXP-\d{4}-\d{6}$" required
+                                    aria-required="true" aria-describedby="exp-feedback">
+                                <div id="exp-feedback" class="invalid-feedback">
+                                    Formato requerido: EXP-AAAA-XXXXXX
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="dni-input" class="form-label fw-semibold">
+                                    DNI <abbr title="campo requerido" class="text-danger"
+                                        aria-label="requerido">*</abbr>
+                                </label>
+                                <input type="text" class="form-control" id="dni-input" placeholder="12345678"
+                                    maxlength="8" pattern="^\d{8}$" inputmode="numeric" required aria-required="true"
+                                    aria-describedby="dni-feedback">
+                                <div id="dni-feedback" class="invalid-feedback">El DNI debe tener exactamente 8 dígitos.
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="email-input" class="form-label fw-semibold">
+                                    Correo electrónico <span class="text-muted fw-normal">(opcional)</span>
+                                </label>
+                                <input type="email" class="form-control" id="email-input"
+                                    placeholder="correo@ejemplo.com" aria-describedby="email-help">
+                                <div id="email-help" class="form-text">Se enviará la respuesta a este correo si lo
+                                    proporcionas.</div>
+                                <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-danger btn-lg w-100" id="btn-consultar">
+                                Consultar Estado del Trámite
+                            </button>
+                        </form>
+
+                        <div class="stats-row mt-4">
+                            <div class="stat-card">
+                                <div class="stat-num text-danger">19</div>
+                                <div class="small text-muted">Trámites digitales</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num" style="color:var(--color-secondary)">60K+</div>
+                                <div class="small text-muted">Ciudadanos capacitados</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num text-success">8,100</div>
+                                <div class="small text-muted">Innovadores digitales</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h3 class="fw-semibold mb-2" style="color:var(--color-secondary)">Respuesta del Servidor</h3>
+                        <p class="text-muted small mb-2">La API RESTful responde en formato JSON:</p>
+
+                        <div id="api-results" role="region" aria-label="Resultado de la consulta API"
+                            aria-live="polite">
+                            <span style="color:#cdd6f4">// Completa el formulario y presiona "Consultar"</span>
+                            <br><span style="color:#89b4fa">// POST /api/tramites/consultar</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <small class="text-muted">Endpoint: <code>POST /api/tramites/consultar</code></small>
+                            <span id="api-status" class="small"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer role="contentinfo">
 

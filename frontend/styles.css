@@ -108,3 +108,25 @@ img {
     font-size: .875rem;
     color: #6c757d;
 }
+
+/*api-consulta*/
+#api-results {
+    background: #1e1e2e;
+    color: #a6e3a1;
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem;
+    min-height: 120px;
+    font-family: 'Courier New', monospace;
+    font-size: .82rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.status-ok { 
+    color: #198754; 
+    font-weight: 700; 
+}
+.status-error { 
+    color: #dc3545; 
+    font-weight: 700; 
+}

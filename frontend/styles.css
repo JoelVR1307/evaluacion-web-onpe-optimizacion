@@ -114,7 +114,7 @@ img {
     background: #1e1e2e;
     color: #a6e3a1;
     border-radius: var(--radius);
-    padding: 1rem 1.2rem;
+    padding: 1rem ;
     min-height: 120px;
     font-family: 'Courier New', monospace;
     font-size: .82rem;
@@ -155,4 +155,73 @@ img {
 .stat-num {
     font-size: 1.8rem;
     font-weight: 800;
+}
+
+/*footer*/
+footer {
+    background: var(--color-secondary);
+    color: rgba(255,255,255,.82);
+    padding: 2.5rem 0 1.5rem;
+}
+
+footer h5 {
+    color: #fff; 
+}
+
+footer a  { 
+    color: rgba(255,255,255,.7); 
+    text-decoration: none; 
+}
+
+footer a:hover { 
+    color: #fff; 
+    text-decoration: underline; 
+}
+
+.footer-divider { 
+    border-color: rgba(255,255,255,.2); 
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero { 
+        padding: 2.5rem 0; 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .hero-icon-wrap { 
+        display: none; 
+    }
+    .services-grid { 
+        grid-template-columns: 1fr 1fr; 
+    }
+    .stats-row { 
+        justify-content: center; 
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .navbar-gobpe .navbar-brand { 
+        font-size: 1.15rem; 
+    }
+    .hero h1 { 
+        font-size: 1.3rem; 
+    }
+    .services-grid { 
+        grid-template-columns: 1fr; 
+    }
+    #api-results { 
+        font-size: .75rem; 
+    }
+}
+
+/* Print */
+@media print {
+    .navbar-gobpe, footer, #api-consulta { 
+        display: none; 
+    }
+    body { 
+        font-size: 12pt; 
+    }
 }

@@ -225,3 +225,31 @@ footer a:hover {
         font-size: 12pt; 
     }
 }
+
+
+.skip-link {
+    position: absolute; top: -50px; left: 0;
+    background: var(--color-secondary); color: #fff;
+    padding: 10px 18px; font-weight: 600; z-index: 9999;
+    text-decoration: none; transition: top .2s;
+}
+.skip-link:focus { 
+    top: 0; 
+}
+
+:focus-visible {
+    outline: 3px solid #ffc107;
+    outline-offset: 3px;
+}
+
+@media (prefers-contrast: high) {
+    .service-card  { border: 2px solid #111 !important; }
+    .navbar-gobpe  { border-bottom: 3px solid #fff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { 
+        transition: none !important; 
+        animation: none !important; 
+    }
+}

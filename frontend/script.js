@@ -1,0 +1,1 @@
+/*archivo q usare para aplicar logica JavaScript a la web*/
